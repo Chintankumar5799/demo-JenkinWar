@@ -20,6 +20,11 @@ public class DemoController {
 		return "hello";
 	}
 	
+	@GetMapping("/response")
+	public String response(){
+		return "how are you";
+	}
+	
 	@PostMapping("/addUser")
 	public ResponseEntity<HashMap<String,Integer>> addUser(@RequestParam String name,@RequestParam int number) {
 		hmap.put(name, number);
